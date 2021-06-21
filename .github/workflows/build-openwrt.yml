@@ -98,12 +98,6 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
         
-    - name: keneral config
-      id: keneralconfig
-      run: |
-        cd openwrt
-        make kernel_menuconfig -j$(nproc)
-
     - name: SSH connection to Actions - Keneral config
       uses: P3TERX/ssh2actions@v1.0.0
       env:
